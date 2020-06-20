@@ -1,0 +1,78 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>理论课3作业（表单、文本输入框、密码输入框、提示、数字输入框、网址输入框、邮箱输入框、文本域创建、单选框、复选框、下拉签单、提示、重置）</title>
+    <style type="text/css">
+        div {
+          text-align: center;
+        }
+      </style>
+</head>
+
+<body>
+    <div>
+    <h1>学生爱好调查表</h1>
+    <form method="POST" action="save.php">
+        <!--登录页面-->
+        <h3>登录</h3>
+        <label for="username">用户名：</label>
+        <input type="text" name="username" />
+        <br>
+        <label for="pass">密    码：</label>
+        <input type="password" name="pass" />
+        <br>
+        <!--登录页面-->
+        <!--基本信息-->
+        <h3>基本信息</h3>
+        <label for="学号">学     号:</label>
+        <input type="number" placeholder="请输入你的学号" id="学号" />
+        <br>
+        <label for="个人网址">个人网址：</label>
+        <input type="url" placeholder="请输入你的个人网址" id="个人网址" />
+        <br>
+        <label for="邮箱">邮     箱：</label>
+        <input type="email" placeholder="请输入你的邮箱" id="邮箱" />
+        <!--基本信息-->
+        <br>
+        <!--选项-->
+        <label for="gender">性     别:</label>
+        <label>男</label>
+        <input type="radio" value="男" name="gender" />
+        <label>女</label>
+        <input type="radio" value="女" name="gender" />
+        <br>
+        <labei for="hobby">爱     好：</labei>
+        <label>看书</label>
+        <input type="checkbox" value="看书" id="hobby"/>
+        <label>旅游</label>
+        <input type="checkbox" value="旅游" id="hobby" />
+        <label>运动</label>
+        <input type="checkbox" value="运动" id="hobby" />
+        <br>
+        <labei>年     级：</labei>
+        <select>
+            <option value="大一" selected="selected">大一</option>
+            <option value="大二">大二</option>
+            <option value="大三">大三</option>
+            <option value="大四">大四</option>
+        </select>
+        <!--选项-->
+        <br>
+        <!--提交/重置-->
+        <label for="座位号">座位号</label>
+        <input type="number" value=" " name="座位号" />
+        <input type="submit" value="提交" />
+        <input type="reset" value="重置">
+        <!--提交/重置-->
+        <br>
+        <!--其他-->
+        <label>其他留言:</label>
+        <br>
+        <textarea rows="20" cols="60">在这里输入文字</textarea>
+        <!--其他-->
+    </form>
+    </div>
+</body>
+
+</html>
