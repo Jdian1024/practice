@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" Content="text/html; charset=utf-8" />
+    <title>javascript</title>
+    <style type="text/css">
+        body {
+            font-size: 17px
+        }
+
+        #txt {
+            height: 400px;
+            width: 600px;
+            border: #333 solid 1px;
+            padding: 5px;
+        }
+
+        p {
+            line-height: 18px;
+            text-indent: 2em;
+        }
+    </style>
+</head>
+
+<body>
+    <h2 id="con">Javascript</h2>
+    <div id="txt">
+        <h5>Javascript为网页添加动态效果并实现与用户交互的功能。</h5>
+        <br>
+        <p>1. JavaScript入门篇，让不懂JS的你，快速了解JS。</p>
+        <br>
+        <p>2. JavaScript进阶篇，让你掌握JS的基础语法、函数、数组、事件、内置对象、BOM浏览器、DOM操作。</p>
+        <br>
+        <p>3. 学完以上两门基础课后，在深入学习JavaScript的变量作用域、事件、对象、运动、cookie、正则表达式、ajax等课程。</p>
+        <br>
+    </div>
+    <form>
+        <!--当点击相应按钮，执行相应操作，为按钮添加相应事件-->
+        <input type="button" value="改变颜色" onclick="changeColor()">
+        <input type="button" value="改变宽高" onclick="changeSize()">
+        <input type="button" value="隐藏内容" onclick="Hidetext()">
+        <input type="button" value="显示内容" onclick="Showtext()">
+        <input type="button" value="取消设置" onclick="Resettext()">
+    </form>
+    <script type="text/javascript">
+        var mychar = document.getElementById("txt");
+        function changeColor() {
+            mychar.style.color = "red";
+            mychar.style.backgroundColor = "yellow";
+        }
+        function changeSize() {
+            mychar.style.width = "400px";
+            mychar.style.height = "400px";
+        }
+        function Hidetext() {
+            mychar.style.display = "none";
+        }
+        function Showtext() {
+            mychar.style.display = "block";
+        }
+        function Resettext() {
+            var my = confirm("确认取消设置？");
+            if (my == ture) {
+                mychar.removeAttribute("style");
+            }
+            else{
+                mychar.displayAttribute("style");
+            }
+        }
+    </script>
+</body>
+
+</html>
